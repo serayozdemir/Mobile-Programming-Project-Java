@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/schoolNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="202013709021"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.196"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/myName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/schoolNo"
+        android:layout_marginBottom="88dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="Melike Seray Özdemir"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@id/btn_convertor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/schoolNo" />
+
+    <Button
+        android:id="@+id/btn_sms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_random"
+        android:layout_marginTop="8dp"
+        android:onClick="clickSMS"
+        android:text="SMS"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/btn_random"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/btn_random"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_convertor"
+        android:layout_marginTop="10dp"
+        android:onClick="clickRandom"
+        android:text="Random"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/btn_convertor"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/btn_convertor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/myName"
+        android:layout_marginTop="170dp"
+        android:onClick="clickConvertor"
+        android:text="Convertor"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/schoolNo"
+        tools:layout_editor_absoluteX="0dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

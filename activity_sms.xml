@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/sms_txt"
+        android:layout_width="410dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="SMS"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/tel_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tel_txt"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="Tel: "
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/mesaj_txt"
+        app:layout_constraintEnd_toStartOf="@+id/tel_no"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sms_txt" />
+
+    <EditText
+        android:id="@+id/tel_no"
+        android:layout_width="260dp"
+        android:layout_height="50dp"
+        android:hint="telefon numarasını giriniz"
+        app:layout_constraintBottom_toTopOf="@+id/msj_icerik"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tel_txt"
+        app:layout_constraintTop_toBottomOf="@+id/sms_txt" />
+
+    <TextView
+        android:id="@+id/mesaj_txt"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="Mesaj: "
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/msj_icerik"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tel_txt" />
+
+    <EditText
+        android:id="@+id/msj_icerik"
+        android:layout_width="260dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="20dp"
+        android:hint="mesajınızı giriniz"
+        app:layout_constraintBottom_toTopOf="@+id/gonder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/mesaj_txt"
+        app:layout_constraintTop_toBottomOf="@+id/tel_no" />
+
+    <Button
+        android:id="@+id/gonder"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="130dp"
+        android:layout_marginBottom="350dp"
+        android:text="Gönder"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/msj_icerik" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

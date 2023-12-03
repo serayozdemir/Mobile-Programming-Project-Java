@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConvertorActivity">
+
+    <TextView
+        android:id="@+id/convertor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="Convertor"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/decimalInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.666" />
+
+    <TextView
+        android:id="@+id/decimalText"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="Decimal"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/resultText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/convertor"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/dcmlBase"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="Tabanı seçin "
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/conversionTypeSpinner"
+        app:layout_constraintEnd_toStartOf="@+id/conversionTypeSpinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/decimalText" />
+
+    <Spinner
+        android:id="@+id/conversionTypeSpinner"
+        android:layout_width="260dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/decimalInput"
+        android:entries="@array/conversion_types"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dcmlBase"
+        app:layout_constraintTop_toBottomOf="@+id/decimalInput" />
+
+    <EditText
+        android:id="@+id/decimalInput"
+        android:layout_width="260dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="110dp"
+        android:hint="Decimal Sayı Girin"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/conversionTypeSpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/decimalText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="Dönüştür"
+        app:layout_constraintEnd_toStartOf="@+id/resultText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dcmlBase" />
+
+    <EditText
+        android:id="@+id/resultText"
+        android:layout_width="260dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:fontFamily="sans-serif"
+        android:gravity="left"
+        android:text="Sonuç:"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button1"
+        app:layout_constraintTop_toBottomOf="@+id/conversionTypeSpinner" />
+
+    <TextView
+        android:id="@+id/mbyteText"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="Megabyte"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultText" />
+
+    <EditText
+        android:id="@+id/mbyteInput"
+        android:layout_width="260dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:hint="Megabyte Giriniz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mbyteText"
+        app:layout_constraintTop_toBottomOf="@+id/resultText" />
+
+    <TextView
+        android:id="@+id/mbyteBase"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="Türü seçiniz "
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mbyteText" />
+
+    <Spinner
+        android:id="@+id/mbyteTypeSpinner"
+        android:layout_width="260dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mbyteBase"
+        app:layout_constraintTop_toBottomOf="@+id/mbyteInput" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="Dönüştür"
+        app:layout_constraintEnd_toStartOf="@+id/result2Text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mbyteBase" />
+
+    <EditText
+        android:id="@+id/result2Text"
+        android:layout_width="260dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:fontFamily="sans-serif"
+        android:gravity="left"
+        android:text="Sonuç:"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/mbyteBase" />
+
+    <TextView
+        android:id="@+id/celsiusText"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="Celsius"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/celsiusInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/result2Text" />
+
+    <EditText
+        android:id="@+id/celsiusInput"
+        android:layout_width="260dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:hint="Dereceyi giriniz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/celsiusText"
+        app:layout_constraintTop_toBottomOf="@+id/result2Text" />
+
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="260dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="125dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/celsiusInput">
+
+        <RadioButton
+            android:id="@+id/radioFahrenheit"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:text="Fahrenheit"
+            app:layout_constraintEnd_toStartOf="@+id/radioKelvin"
+            app:layout_constraintTop_toBottomOf="@+id/celsiusText" />
+
+        <RadioButton
+            android:id="@+id/radioKelvin"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:text="Kelvin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/radioFahrenheit"
+            app:layout_constraintTop_toBottomOf="@+id/celsiusInput" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="Dönüştür"
+        app:layout_constraintBottom_toTopOf="@+id/result3Text"
+        app:layout_constraintEnd_toStartOf="@+id/radioGroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/celsiusText" />
+
+    <EditText
+        android:id="@+id/result3Text"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="sans-serif"
+        android:text="Sonuç:"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/radioGroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/celsiusText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

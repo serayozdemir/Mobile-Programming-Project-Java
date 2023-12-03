@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string-array name="conversion_types">
+        <item>Binary (ikilik)</item>
+        <item>Octal (sekizlik)</item>
+        <item>Hexadecimal (on atlılık)</item>
+    </string-array>
+    <string-array name="conversion_types2">
+        <item>Kilobyte</item>
+        <item>Byte</item>
+        <item>Kibibyte</item>
+    </string-array>
+</resources>
